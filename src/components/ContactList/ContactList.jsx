@@ -1,15 +1,24 @@
-import { ContactsListEl } from 'components/ContactsListEl/ContactsListEl';
+import { ContactElement } from 'components';
 import PropTypes from 'prop-types';
 
-export const ContactsList = ({ contacts, changeId }) => {
+const ContactList = ({ contacts, onClickDeleteBtn }) => {
   return (
-    <ul className="">
-      <ContactsListEl contacts={contacts} changeId={changeId} />
+    <ul>
+      {contacts.map(({ name, number, id }) => (
+        <ContactElement
+          name={name}
+          number={number}
+          key={id}
+          id={id}
+          onClickDeleteBtn={onClickDeleteBtn}
+        />
+      ))}
     </ul>
   );
 };
+export default ContactList;
 
-ContactsList.propTypes = {
-  contacts: PropTypes.arrayOf(PropTypes.shape({ Object })),
-  changeId: PropTypes.func.isRequired,
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(PropTypes.shape()),
+  onClickDeleteBtn: PropTypes.func,
 };
