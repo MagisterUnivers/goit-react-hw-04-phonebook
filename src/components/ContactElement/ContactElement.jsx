@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import css from './ContactElement.module.css';
+
 const ContactElement = ({ name, number, onClickDeleteBtn, id }) => {
   return (
     <li className={css.listItem}>
@@ -11,11 +12,11 @@ const ContactElement = ({ name, number, onClickDeleteBtn, id }) => {
   );
 };
 
-export default ContactElement;
-
 ContactElement.propTypes = {
   name: PropTypes.string,
   number: PropTypes.string,
   id: PropTypes.string,
   onClickDeleteBtn: PropTypes.func,
 };
+
+export default ContactElement;
