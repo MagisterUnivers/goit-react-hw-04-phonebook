@@ -20,8 +20,8 @@ export function App() {
   });
   const [filter, setFilter] = useState('');
   const [custominput, setCustominput] = useState('');
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  // const [name, setName] = useState('');
+  // const [number, setNumber] = useState('');
 
   useEffect(() => {
     console.log('App rendered!');
@@ -57,10 +57,10 @@ export function App() {
         ...prevContacts,
         { name: USER_NAME, number: USER_NUMBER, id: nanoid() },
       ]);
-      name.value = '';
-      number.value = '';
-      setName('');
-      setNumber('');
+      // name.value = '';
+      // number.value = '';
+      // setName('');
+      // setNumber('');
     } else {
       alert(`${USER_NAME} already in contacts`);
     }
