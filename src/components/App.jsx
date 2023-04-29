@@ -20,22 +20,23 @@ export function App() {
   });
   const [filter, setFilter] = useState('');
   const [custominput, setCustominput] = useState('');
+
   // const [name, setName] = useState('');
   // const [number, setNumber] = useState('');
 
-  useEffect(() => {
-    console.log('App rendered!');
-    const LOCAL_STORAGE = localStorage.getItem('contacts');
-    if (LOCAL_STORAGE) {
-      setContacts(JSON.parse(LOCAL_STORAGE));
-    } else {
-      console.log('Contacts is Empty!');
-    }
-    if (localStorage.getItem('custominput')) {
-      localStorage.getItem('custominput') &&
-        setCustominput(JSON.parse(localStorage.getItem('custominput')));
-    }
-  }, []);
+  // useEffect(() => {
+  //   console.log('App rendered!');
+  //   const LOCAL_STORAGE = localStorage.getItem('contacts');
+  //   if (LOCAL_STORAGE) {
+  //     setContacts(JSON.parse(LOCAL_STORAGE));
+  //   } else {
+  //     console.log('Contacts is Empty!');
+  //   }
+  //   if (localStorage.getItem('custominput')) {
+  //     localStorage.getItem('custominput') &&
+  //       setCustominput(JSON.parse(localStorage.getItem('custominput')));
+  //   }
+  // }, []);
 
   useEffect(() => {
     console.log('DOM Updated!');
