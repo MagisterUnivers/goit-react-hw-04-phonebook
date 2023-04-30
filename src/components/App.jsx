@@ -58,10 +58,6 @@ export function App() {
         ...prevContacts,
         { name: USER_NAME, number: USER_NUMBER, id: nanoid() },
       ]);
-      // name.value = '';
-      // number.value = '';
-      // setName('');
-      // setNumber('');
     } else {
       alert(`${USER_NAME} already in contacts`);
     }
